@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamPF.Views;
 
 namespace XamPF
 {
@@ -10,7 +11,7 @@ namespace XamPF
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new AudioBookPage());
         }
 
         protected override void OnStart()

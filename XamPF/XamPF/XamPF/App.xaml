@@ -1,8 +1,116 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamPF.App">
+<Application
+    x:Class="XamPF.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:FontIcons="clr-namespace:XamPF.CodeFontIcons;assembly=XamPF">
     <Application.Resources>
+
+        <!--#region Colors-->
+        <Color x:Key="colPrim">#FF7948</Color>
+        <Color x:Key="colSec">#FFFFFF</Color>
+        <Color x:Key="colTer">#FFDD4F</Color>
+        <Color x:Key="colQua">#ACAAB5</Color>
+        <Color x:Key="colQui">#ECEFF2</Color>
+        <!--#endregion-->
+
+        <!--#region FontImageSource TABS-->
+        <FontImageSource
+            x:Key="icon_tab_books"
+            FontFamily="CustomFontIcons"
+            Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_books}"
+            Size="21"
+            Color="{StaticResource colQua}" />
+
+        <FontImageSource
+            x:Key="icon_tab_saved"
+            FontFamily="CustomFontIcons"
+            Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_saved}"
+            Size="21"
+            Color="{StaticResource colQua}" />
+
+        <FontImageSource
+            x:Key="icon_tab_audio"
+            FontFamily="CustomFontIcons"
+            Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_audio}"
+            Size="21"
+            Color="{StaticResource colQua}" />
+
+        <FontImageSource
+            x:Key="icon_tab_profile"
+            FontFamily="CustomFontIcons"
+            Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_profile}"
+            Size="21"
+            Color="{StaticResource colQua}" />
+        <!--#endregion-->
+
+        <!--#region FontImageSource INTERFACES-->
+        <FontImageSource
+            x:Key="icon_moore"
+            FontFamily="CustomFontIcons"
+            Glyph="{x:Static FontIcons:CustomFontIcons.icon_moore}"
+            Size="4"
+            Color="{DynamicResource colSec}" />
+
+        <FontImageSource
+            x:Key="icon_star"
+            FontFamily="CustomFontIcons"
+            Glyph="{x:Static FontIcons:CustomFontIcons.icon_star}"
+            Size="12.8"
+            Color="{DynamicResource colTer}" />
+
+        <FontImageSource
+            x:Key="icon_left_arrow_line"
+            FontFamily="CustomFontIcons"
+            Glyph="{x:Static FontIcons:CustomFontIcons.icon_left_arrow_line}"
+            Size="26"
+            Color="{DynamicResource colSec}" />
+
+        <FontImageSource
+            x:Key="icon_play"
+            FontFamily="CustomFontIcons"
+            Glyph="{x:Static FontIcons:CustomFontIcons.icon_play}"
+            Size="15.77"
+            Color="{DynamicResource colSec}" />
+
+        <FontImageSource
+            x:Key="icon_pause"
+            FontFamily="CustomFontIcons"
+            Glyph="{x:Static FontIcons:CustomFontIcons.icon_pause}"
+            Size="15.77"
+            Color="{DynamicResource colSec}" />
+        <!--#endregion-->
+
+        <!--#region TEXT SIZE [MATERIAL DESIGN]-->
+        <!--  H1-Light  -->
+        <x:Double x:Key="TxtSizeH1_96">96</x:Double>
+        <!--  H2-Light  -->
+        <x:Double x:Key="TxtSizeH2_60">60</x:Double>
+        <!--  H3-Regular  -->
+        <x:Double x:Key="TxtSizeH3_48">48</x:Double>
+        <!--  H4-Regular  -->
+        <x:Double x:Key="TxtSizeH4_34">34</x:Double>
+        <!--  H5-Regular  -->
+        <x:Double x:Key="TxtSizeH5_24">24</x:Double>
+        <!--  H6-Medium, (Bold)  -->
+        <x:Double x:Key="TxtSizeH6_20">20</x:Double>
+        <!--  Title-Medium, (Bold)  -->
+        <x:Double x:Key="TxtSizeTit_18">18</x:Double>
+        <!--  SubTitle1-Regular, (Bold)  -->
+        <x:Double x:Key="TxtSizeSubTit1_16">16</x:Double>
+        <!--  SubTitle2-Medium, (Bold)  -->
+        <x:Double x:Key="TxtSizeSubTit2_14">14</x:Double>
+        <!--  Body1-Regular  -->
+        <x:Double x:Key="TxtSizeBod1_16">16</x:Double>
+        <!--  Body2-Regular  -->
+        <x:Double x:Key="TxtSizeBod2_14">14</x:Double>
+        <!--  Button-Medium, (Bold)  -->
+        <x:Double x:Key="TxtSizeBtn_14">14</x:Double>
+        <!--  Caption-Regular  -->
+        <x:Double x:Key="TxtSizeCap_12">12</x:Double>
+        <!--  Overline-Regular  -->
+        <x:Double x:Key="TxtSizeOver_10">10</x:Double>
+        <!--#endregion-->
 
     </Application.Resources>
 </Application>
