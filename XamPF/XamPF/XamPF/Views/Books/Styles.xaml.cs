@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace XamPF
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace XamPF.Views.Books
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Styles : ResourceDictionary
     {
-        public MainPage()
+        public Styles()
         {
             InitializeComponent();
         }

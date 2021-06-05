@@ -11,7 +11,60 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\FontFamily\Montserrat-Black.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-BlackItalic.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-Bold.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-BoldItalic.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-ExtraBold.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-ExtraBoldItalic.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-ExtraLight.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-ExtraLightItalic.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-Italic.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-Light.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-LightItalic.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-Medium.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-MediumItalic.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-Regular.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-SemiBold.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-SemiBoldItalic.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-Thin.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-ThinItalic.ttf" />
+    <None Remove="Resources\FontIcons\customfonticons.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-Black.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-BlackItalic.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-Bold.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-BoldItalic.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-ExtraBold.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-ExtraBoldItalic.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-ExtraLight.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-ExtraLightItalic.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-Italic.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-Light.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-LightItalic.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-Medium.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-MediumItalic.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-Regular.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-SemiBold.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-SemiBoldItalic.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-Thin.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-ThinItalic.ttf" />
+    <EmbeddedResource Include="Resources\FontIcons\customfonticons.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\Books\AudioBookPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Books\Styles.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

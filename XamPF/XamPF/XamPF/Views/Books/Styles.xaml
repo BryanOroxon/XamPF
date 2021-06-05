@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="XamPF.Views.Books.Styles"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--#region Headline1-->
+
+    <!--#endregion-->
+
+
+    <!--#region Headline2-->
+
+    <!--#endregion-->
+
+
+    <!--#region Headline3-->
+
+    <!--#endregion-->
+
+
+    <!--#region Headline4-->
+
+    <!--#endregion-->
+
+
+    <!--#region Headline5-->
+    <Style
+        x:Key="TxtHeadLine5_1"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeH5_24}" />
+        <Setter Property="CharacterSpacing" Value="0.6" />
+        <Setter Property="FontFamily" Value="Montserrat_Bold" />
+    </Style>
+
+    <Style
+        x:Key="TxtHeadLine5_2"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeH5_24}" />
+        <Setter Property="Opacity" Value="0.55" />
+        <Setter Property="CharacterSpacing" Value="1.09" />
+        <Setter Property="FontFamily" Value="Montserrat_Regular" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Headline6-->
+    <Style
+        x:Key="TxtHeadline6_1"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeH6_20}" />
+        <Setter Property="CharacterSpacing" Value="0.63" />
+        <Setter Property="FontFamily" Value="Montserrat_SemiBold" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Title-->
+    <Style
+        x:Key="TxtTitle_1"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeTit_18}" />
+        <Setter Property="FontFamily" Value="Montserrat_SemiBold" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Subtitle1-->
+    <Style
+        x:Key="TxtSubtitle1_1"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeSubTit1_16}" />
+        <Setter Property="CharacterSpacing" Value="0.5" />
+        <Setter Property="FontFamily" Value="Montserrat_SemiBold" />
+    </Style>
+
+    <Style
+        x:Key="TxtSubtitle1_2"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeSubTit1_16}" />
+        <Setter Property="Opacity" Value="0.8" />
+        <Setter Property="FontFamily" Value="Montserrat_Regular" />
+    </Style>
+
+    <Style
+        x:Key="TxtSubtitle1_3"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeSubTit1_16}" />
+        <Setter Property="Opacity" Value="0.5" />
+        <Setter Property="FontFamily" Value="Montserrat_Regular" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Subtitle2-->
+
+    <!--#endregion-->
+
+
+    <!--#region Body1-->
+    <Style
+        x:Key="TxtBody1_1"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeBod1_16}" />
+        <Setter Property="FontFamily" Value="Montserrat_Regular" />
+    </Style>
+
+    <Style
+        x:Key="TxtBody1_2"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeBod1_16}" />
+        <Setter Property="FontFamily" Value="Montserrat_Medium" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Body2-->
+    <Style
+        x:Key="TxtBody2_1"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeBod2_14}" />
+        <Setter Property="Opacity" Value="0.8" />
+        <Setter Property="FontFamily" Value="Montserrat_Regular" />
+    </Style>
+
+    <Style
+        x:Key="TxtBody2_2"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeBod2_14}" />
+        <Setter Property="FontFamily" Value="Montserrat_Medium" />
+    </Style>
+
+    <Style
+        x:Key="TxtBody2_3"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeBod2_14}" />
+        <Setter Property="Opacity" Value="0.5" />
+        <Setter Property="FontFamily" Value="Montserrat_Regular" />
+    </Style>
+
+    <Style
+        x:Key="TxtBody2_4"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeBod2_14}" />
+        <Setter Property="FontFamily" Value="Montserrat_Regular" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Button-->
+
+    <!--#endregion-->
+
+
+    <!--#region Caption-->
+
+    <!--#endregion-->
+
+
+    <!--#region Overline-->
+
+    <!--#endregion-->
+
+
+    <!--#region Visual States Manager-->
+
+    <!--#endregion-->
+
+</ResourceDictionary>
