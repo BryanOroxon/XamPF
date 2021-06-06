@@ -39,10 +39,10 @@
                      xct:ShadowEffect.Radius="30" />
                     
             <StackLayout Spacing="10">
-                <Label Text="Stack Layout with Shadow"  />
+                <Label Text="Stack Layout con Shadow"  />
                 <StackLayout xct:ShadowEffect.Color="Black">
                     <BoxView Color="White" />
-                    <BoxView Color="Red" />
+                    <BoxView Color="Orange" />
                     <BoxView Color="White" />
                 </StackLayout>
             </StackLayout>
@@ -51,10 +51,10 @@
                      xct:ShadowEffect.Color="#000000"
                      xct:ShadowEffect.Opacity="1"/>
             <CheckBox xct:ShadowEffect.Color="#E91E63" />
-            <Image Margin="10" Source="https://logos-download.com/wp-content/uploads/2017/07/Microsoft_.NET_logo-700x667.png" WidthRequest="40" HeightRequest="40"
+            <Image Margin="10" Source="https://logos-download.com/wp-content/uploads/2017/07/Microsoft_.NET_logo-700x667.png" WidthRequest="60" HeightRequest="60"
                 xct:ShadowEffect.Color="#00897B"   />
             <ImageButton Margin="10" Source="https://www.hexacta.com/wp-content/uploads/2016/03/xamarin.jpg"
-                         WidthRequest="40" HeightRequest="40"
+                         WidthRequest="80" HeightRequest="80"
                          xct:ShadowEffect.OffsetX="10"
                          xct:ShadowEffect.OffsetY="20"
                          xct:ShadowEffect.Color="#FB8C00"  />
