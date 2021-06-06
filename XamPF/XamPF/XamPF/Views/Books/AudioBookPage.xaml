@@ -19,7 +19,7 @@
 
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout>
+        <StackLayout HorizontalOptions="Center">
             
             <Frame Margin="20" BackgroundColor="#4DD0E1" 
                    xct:ShadowEffect.Color="#42A5F5" 
@@ -31,33 +31,42 @@
                    xct:ShadowEffect.OffsetY="4"/>
             </Frame>
 
-            <Label   Text="Probando el radio" HorizontalTextAlignment="Center"
-                     xct:ShadowEffect.Color="#3F51B5" 
-                     xct:ShadowEffect.Radius=".8" />
-            <Button Text="Bóton con radio" WidthRequest="50" HeightRequest="30" CornerRadius="15" BackgroundColor="Orange" BorderColor="OrangeRed"
-                    xct:ShadowEffect.Color="#E64A19" 
-                     xct:ShadowEffect.Radius="30" />
-                    
-            <StackLayout Spacing="10">
-                <Label Text="Stack Layout con Shadow"  />
-                <StackLayout xct:ShadowEffect.Color="Black">
-                    <BoxView Color="White" />
-                    <BoxView Color="Orange" />
-                    <BoxView Color="White" />
-                </StackLayout>
-            </StackLayout>
-                <Entry   Text="Shadow en un entry" BackgroundColor="#80CBC4" xct:ShadowEffect.Color="BlanchedAlmond"  />
-                <BoxView WidthRequest="40" HeightRequest="20" HorizontalOptions="Center" Color="#BA68C8" 
-                     xct:ShadowEffect.Color="#000000"
-                     xct:ShadowEffect.Opacity="1"/>
-            <CheckBox xct:ShadowEffect.Color="#E91E63" />
-            <Image Margin="10" Source="https://logos-download.com/wp-content/uploads/2017/07/Microsoft_.NET_logo-700x667.png" WidthRequest="60" HeightRequest="60"
-                xct:ShadowEffect.Color="#00897B"   />
-            <ImageButton Margin="10" Source="https://www.hexacta.com/wp-content/uploads/2016/03/xamarin.jpg"
-                         WidthRequest="80" HeightRequest="80"
-                         xct:ShadowEffect.OffsetX="10"
-                         xct:ShadowEffect.OffsetY="20"
-                         xct:ShadowEffect.Color="#FB8C00"  />
+            <Label   Text="Probando TxtHeadLine5_1" Style="{StaticResource TxtHeadLine5_1}" HorizontalTextAlignment="Center"
+                     xct:ShadowEffect.Color="#1976D2" />
+
+            <Label   Text="Probando TxtHeadLine5_2" Style="{StaticResource TxtHeadLine5_2}" HorizontalTextAlignment="Center"
+                     xct:ShadowEffect.Color="#EF5350" />
+
+            <Label   Text="Probando TxtHeadline6_1" Style="{StaticResource TxtHeadline6_1}" HorizontalTextAlignment="Center"
+                     xct:ShadowEffect.Color="#FFC107" />
+
+            <Label   Text="Probando TxtSubtitle1_1" Style="{StaticResource TxtSubtitle1_1}" HorizontalTextAlignment="Center"
+                     xct:ShadowEffect.Color="#FF80AB" />
+
+            <Label   Text="Probando TxtSubtitle1_2" Style="{StaticResource TxtSubtitle1_2}" HorizontalTextAlignment="Center"
+                     xct:ShadowEffect.Color="#FFA726" />
+
+            <Label   Text="Probando TxtSubtitle1_3" Style="{StaticResource TxtSubtitle1_3}" HorizontalTextAlignment="Center"
+                     xct:ShadowEffect.Color="#3F51B5" />
+
+            <Label   Text="Probando TxtBody1_1" Style="{StaticResource TxtBody1_1}" HorizontalTextAlignment="Center"
+                     xct:ShadowEffect.Color="#2196F3" />
+
+            <Label   Text="Probando TxtBody1_2" Style="{StaticResource TxtBody1_2}" HorizontalTextAlignment="Center"
+                     xct:ShadowEffect.Color="#9C27B0" />
+
+            <Label   Text="Probando TxtBody2_1" Style="{StaticResource TxtBody2_1}" HorizontalTextAlignment="Center"
+                     xct:ShadowEffect.Color="#FFCA28" />
+
+            <Label   Text="Probando TxtBody2_2" Style="{StaticResource TxtBody2_2}" HorizontalTextAlignment="Center"
+                     xct:ShadowEffect.Color="#F44336" />
+
+            <Label   Text="Probando TxtBody2_3" Style="{StaticResource TxtBody2_3}" HorizontalTextAlignment="Center"
+                     xct:ShadowEffect.Color="#FBC02D" />
+
+            <Label   Text="Probando TxtBody2_4" Style="{StaticResource TxtBody2_4}" HorizontalTextAlignment="Center"
+                     xct:ShadowEffect.Color="#FFA000" />
+            
 
             
         </StackLayout>
