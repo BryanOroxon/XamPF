@@ -4,7 +4,12 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     NavigationPage.HasNavigationBar="False"
-    BackgroundColor="Black">
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:Style="clr-namespace:XamPF.Views.Books"
+    xct:SafeAreaEffect.SafeArea="true"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true"
+    BackgroundColor="White">
 
 
     <ContentPage.Resources>
@@ -13,16 +18,50 @@
 
 
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand">
+        <ScrollView>
+        <StackLayout>
+            
+            <Frame Margin="20" BackgroundColor="#4DD0E1" 
+                   xct:ShadowEffect.Color="#42A5F5" 
+                   xct:ShadowEffect.OffsetX="8" 
+                   xct:ShadowEffect.OffsetY="4">
+                <Label   Text="Pruebas de Shadows" Style="{StaticResource TxtTitle_1}"
+                         xct:ShadowEffect.Color="#3F51B5" 
+                   xct:ShadowEffect.OffsetX="8" 
+                   xct:ShadowEffect.OffsetY="4"/>
+            </Frame>
 
-            <Image Source="{StaticResource icon_star}" />
+            <Label   Text="Probando el radio" HorizontalTextAlignment="Center"
+                     xct:ShadowEffect.Color="#3F51B5" 
+                     xct:ShadowEffect.Radius=".8" />
+            <Button Text="Bóton con radio" WidthRequest="50" HeightRequest="30" CornerRadius="15" BackgroundColor="Orange" BorderColor="OrangeRed"
+                    xct:ShadowEffect.Color="#E64A19" 
+                     xct:ShadowEffect.Radius="30" />
+                    
+            <StackLayout Spacing="10">
+                <Label Text="Stack Layout with Shadow"  />
+                <StackLayout xct:ShadowEffect.Color="Black">
+                    <BoxView Color="White" />
+                    <BoxView Color="Red" />
+                    <BoxView Color="White" />
+                </StackLayout>
+            </StackLayout>
+                <Entry   Text="Shadow en un entry" BackgroundColor="#80CBC4" xct:ShadowEffect.Color="BlanchedAlmond"  />
+                <BoxView WidthRequest="40" HeightRequest="20" HorizontalOptions="Center" Color="#BA68C8" 
+                     xct:ShadowEffect.Color="#000000"
+                     xct:ShadowEffect.Opacity="1"/>
+            <CheckBox xct:ShadowEffect.Color="#E91E63" />
+            <Image Margin="10" Source="https://logos-download.com/wp-content/uploads/2017/07/Microsoft_.NET_logo-700x667.png" WidthRequest="40" HeightRequest="40"
+                xct:ShadowEffect.Color="#00897B"   />
+            <ImageButton Margin="10" Source="https://www.hexacta.com/wp-content/uploads/2016/03/xamarin.jpg"
+                         WidthRequest="40" HeightRequest="40"
+                         xct:ShadowEffect.OffsetX="10"
+                         xct:ShadowEffect.OffsetY="20"
+                         xct:ShadowEffect.Color="#FB8C00"  />
 
-            <Label
-                Text="Welcome to Xamarin.Forms!"
-                HorizontalTextAlignment="Center"
-                Style="{StaticResource TxtBody2_4}" />
-
+            
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
     
 </ContentPage>

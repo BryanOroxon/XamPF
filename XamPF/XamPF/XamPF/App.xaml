@@ -8,7 +8,7 @@
 
         <!--#region Colors-->
         <Color x:Key="colPrim">#FF7948</Color>
-        <Color x:Key="colSec">#FFFFFF</Color>
+        <Color x:Key="colSec">#3F51B5</Color>
         <Color x:Key="colTer">#FFDD4F</Color>
         <Color x:Key="colQua">#ACAAB5</Color>
         <Color x:Key="colQui">#ECEFF2</Color>
