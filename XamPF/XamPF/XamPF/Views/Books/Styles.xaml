@@ -64,7 +64,6 @@
         TargetType="Label">
         <Setter Property="TextColor" Value="{DynamicResource colSec}" />
         <Setter Property="FontSize" Value="{StaticResource TxtSizeTit_18}" />
-        <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="FontFamily" Value="Montserrat_SemiBold" />
     </Style>
     <!--#endregion-->

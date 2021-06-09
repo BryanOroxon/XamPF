@@ -30,6 +30,7 @@
     <None Remove="Resources\FontFamily\Montserrat-Thin.ttf" />
     <None Remove="Resources\FontFamily\Montserrat-ThinItalic.ttf" />
     <None Remove="Resources\FontIcons\customfonticons.ttf" />
+    <None Remove="Sharpnado.Shadows" />
   </ItemGroup>
 
   <ItemGroup>
@@ -55,9 +56,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.1.0" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.2.0-pre2" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Sharpnado.Shadows" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
