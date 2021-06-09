@@ -3,13 +3,15 @@
     x:Class="XamPF.Views.AudioBookPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    NavigationPage.HasNavigationBar="False"
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     xmlns:Style="clr-namespace:XamPF.Views.Books"
-    xct:SafeAreaEffect.SafeArea="true"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:sh="http://sharpnado.com"
+    Title="ShadowEffect and Sharpnado.Shadows"
+    xct:SafeAreaEffect.SafeArea="true"
     ios:Page.UseSafeArea="true"
-    BackgroundColor="White">
+    NavigationPage.HasNavigationBar="True"
+    BackgroundColor="#1D1536">
 
 
     <ContentPage.Resources>
@@ -19,58 +21,151 @@
 
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout HorizontalOptions="Center">
-            
-            <Frame Margin="20" BackgroundColor="#4DD0E1" 
-                   xct:ShadowEffect.Color="#42A5F5" 
-                   xct:ShadowEffect.OffsetX="8" 
-                   xct:ShadowEffect.OffsetY="4">
-                <Label   Text="Pruebas de Shadows" Style="{StaticResource TxtTitle_1}"
-                         xct:ShadowEffect.Color="#3F51B5" 
-                   xct:ShadowEffect.OffsetX="8" 
-                   xct:ShadowEffect.OffsetY="4"/>
-            </Frame>
+            <StackLayout HorizontalOptions="Center">
 
-            <Label   Text="Probando TxtHeadLine5_1" Style="{StaticResource TxtHeadLine5_1}" HorizontalTextAlignment="Center"
-                     xct:ShadowEffect.Color="#1976D2" />
+                <sh:Shadows
+                    CornerRadius="30"
+                    Shades="{sh:SingleShade Offset='4, 14',
+                                            BlurRadius='60',
+                                            Opacity=1,
+                                            Color='#FF7948'}">
+                    <ImageButton
+                        Padding="20"
+                        WidthRequest="60"
+                        HeightRequest="60"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="#FF7948"
+                        CornerRadius="30"
+                        Source="{StaticResource icon_play}" />
+                </sh:Shadows>
 
-            <Label   Text="Probando TxtHeadLine5_2" Style="{StaticResource TxtHeadLine5_2}" HorizontalTextAlignment="Center"
-                     xct:ShadowEffect.Color="#EF5350" />
+                <ImageButton
+                    Padding="20"
+                    xct:ShadowEffect.Color="Orange"
+                    xct:ShadowEffect.Opacity="1"
+                    xct:ShadowEffect.OffsetX="4"
+                    xct:ShadowEffect.OffsetY="14"
+                    xct:ShadowEffect.Radius="60"
+                    WidthRequest="60"
+                    HeightRequest="60"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BackgroundColor="#FF7948"
+                    CornerRadius="30"
+                    Source="{StaticResource icon_play}" />
 
-            <Label   Text="Probando TxtHeadline6_1" Style="{StaticResource TxtHeadline6_1}" HorizontalTextAlignment="Center"
-                     xct:ShadowEffect.Color="#FFC107" />
+                <Label
+                    xct:ShadowEffect.Color="#141212"
+                    xct:ShadowEffect.OffsetX="3"
+                    xct:ShadowEffect.OffsetY="3"
+                    xct:ShadowEffect.Opacity="0.7"
+                    Text="Probando TxtTitle_1"
+                    Style="{StaticResource TxtTitle_1}"
+                    HorizontalTextAlignment="Center" />
 
-            <Label   Text="Probando TxtSubtitle1_1" Style="{StaticResource TxtSubtitle1_1}" HorizontalTextAlignment="Center"
-                     xct:ShadowEffect.Color="#FF80AB" />
+                <Label
+                    xct:ShadowEffect.Color="#B418EB"
+                    xct:ShadowEffect.OffsetX="0"
+                    xct:ShadowEffect.OffsetY="3"
+                    xct:ShadowEffect.Opacity="0.9"
+                    xct:ShadowEffect.Radius="6"
+                    Text="Probando TxtSubtitle1_1"
+                    Style="{StaticResource TxtSubtitle1_1}"
+                    HorizontalTextAlignment="Center" />
 
-            <Label   Text="Probando TxtSubtitle1_2" Style="{StaticResource TxtSubtitle1_2}" HorizontalTextAlignment="Center"
-                     xct:ShadowEffect.Color="#FFA726" />
+                <Label
+                    xct:ShadowEffect.Color="#6D6B6B"
+                    xct:ShadowEffect.OffsetX="0"
+                    xct:ShadowEffect.OffsetY="3"
+                    xct:ShadowEffect.Opacity="0.9"
+                    xct:ShadowEffect.Radius="6"
+                    Text="Probando TxtBody2_1"
+                    Style="{StaticResource TxtBody2_1}"
+                    HorizontalTextAlignment="Center" />
 
-            <Label   Text="Probando TxtSubtitle1_3" Style="{StaticResource TxtSubtitle1_3}" HorizontalTextAlignment="Center"
-                     xct:ShadowEffect.Color="#3F51B5" />
+                <Label
+                    xct:ShadowEffect.Color="#BFD5C9"
+                    xct:ShadowEffect.OffsetX="0"
+                    xct:ShadowEffect.OffsetY="3"
+                    xct:ShadowEffect.Opacity="0.7"
+                    xct:ShadowEffect.Radius="6"
+                    Text="Probando TxtBody1_1"
+                    Style="{StaticResource TxtBody1_1}"
+                    HorizontalTextAlignment="Center" />
 
-            <Label   Text="Probando TxtBody1_1" Style="{StaticResource TxtBody1_1}" HorizontalTextAlignment="Center"
-                     xct:ShadowEffect.Color="#2196F3" />
+                <Label
+                    xct:ShadowEffect.Color="#FF7948"
+                    xct:ShadowEffect.OffsetX="0"
+                    xct:ShadowEffect.OffsetY="3"
+                    xct:ShadowEffect.Opacity="0.8"
+                    xct:ShadowEffect.Radius="6"
+                    Text="Brave New World"
+                    Style="{StaticResource TxtHeadline6_1}"
+                    HorizontalTextAlignment="Center" />
 
-            <Label   Text="Probando TxtBody1_2" Style="{StaticResource TxtBody1_2}" HorizontalTextAlignment="Center"
-                     xct:ShadowEffect.Color="#9C27B0" />
+                <Label
+                    xct:ShadowEffect.Color="#7AE0BD"
+                    xct:ShadowEffect.OffsetX="0"
+                    xct:ShadowEffect.OffsetY="3"
+                    xct:ShadowEffect.Opacity="0.8"
+                    xct:ShadowEffect.Radius="6"
+                    Text="The Old Man and the Sea"
+                    Style="{StaticResource TxtHeadline6_1}"
+                    HorizontalTextAlignment="Center" />
 
-            <Label   Text="Probando TxtBody2_1" Style="{StaticResource TxtBody2_1}" HorizontalTextAlignment="Center"
-                     xct:ShadowEffect.Color="#FFCA28" />
+                <Label
+                    xct:ShadowEffect.Color="#00494D"
+                    xct:ShadowEffect.OffsetX="0"
+                    xct:ShadowEffect.OffsetY="3"
+                    xct:ShadowEffect.Opacity="0.8"
+                    xct:ShadowEffect.Radius="6"
+                    Text="1984"
+                    Style="{StaticResource TxtHeadline6_1}"
+                    HorizontalTextAlignment="Center" />
 
-            <Label   Text="Probando TxtBody2_2" Style="{StaticResource TxtBody2_2}" HorizontalTextAlignment="Center"
-                     xct:ShadowEffect.Color="#F44336" />
+                <Label
+                    xct:ShadowEffect.Color="#E1C2AF"
+                    xct:ShadowEffect.OffsetX="0"
+                    xct:ShadowEffect.OffsetY="3"
+                    xct:ShadowEffect.Opacity="0.8"
+                    xct:ShadowEffect.Radius="6"
+                    Text="Pride and Prejudice"
+                    Style="{StaticResource TxtHeadline6_1}"
+                    HorizontalTextAlignment="Center" />
 
-            <Label   Text="Probando TxtBody2_3" Style="{StaticResource TxtBody2_3}" HorizontalTextAlignment="Center"
-                     xct:ShadowEffect.Color="#FBC02D" />
+                <Label
+                    xct:ShadowEffect.Color="#FF7948"
+                    xct:ShadowEffect.OffsetX="0"
+                    xct:ShadowEffect.OffsetY="3"
+                    xct:ShadowEffect.Opacity="0.8"
+                    xct:ShadowEffect.Radius="6"
+                    Text="The Lord of the Flies"
+                    Style="{StaticResource TxtHeadline6_1}"
+                    HorizontalTextAlignment="Center" />
 
-            <Label   Text="Probando TxtBody2_4" Style="{StaticResource TxtBody2_4}" HorizontalTextAlignment="Center"
-                     xct:ShadowEffect.Color="#FFA000" />
-            
+                <Label
+                    xct:ShadowEffect.Color="#FE8B30"
+                    xct:ShadowEffect.OffsetX="0"
+                    xct:ShadowEffect.OffsetY="3"
+                    xct:ShadowEffect.Opacity="0.8"
+                    xct:ShadowEffect.Radius="6"
+                    Text="Farenheit"
+                    Style="{StaticResource TxtHeadline6_1}"
+                    HorizontalTextAlignment="Center" />
 
-            
-        </StackLayout>
+                <Label
+                    xct:ShadowEffect.Color="#000000"
+                    xct:ShadowEffect.OffsetX="0"
+                    xct:ShadowEffect.OffsetY="3"
+                    xct:ShadowEffect.Opacity="0.7"
+                    xct:ShadowEffect.Radius="6"
+                    Text="Probando TxtSubtitle1_2"
+                    Style="{StaticResource TxtSubtitle1_2}"
+                    HorizontalTextAlignment="Center" />
+
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
-    
+
 </ContentPage>

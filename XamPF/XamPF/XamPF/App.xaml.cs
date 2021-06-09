@@ -11,6 +11,8 @@ namespace XamPF
         {
             InitializeComponent();
 
+            Sharpnado.Shades.Initializer.Initialize(loggerEnable: false);
+
             MainPage = new NavigationPage(new AudioBookPage());
         }
 
