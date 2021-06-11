@@ -108,9 +108,9 @@
                 <ColumnDefinition Width="20" />
 
                 <!--  1  -->
-                <!--<ColumnDefinition Width="0.068*" />-->
+                <ColumnDefinition Width="0.068*" />
                 <!--  1  -->
-                <ColumnDefinition Width="28" />
+                <!--<ColumnDefinition Width="28" />-->
 
                 <!--  2  -->
                 <ColumnDefinition Width="0.32*" />
