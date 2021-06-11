@@ -172,7 +172,7 @@
                             Color="Pink" />
                     </sh:ImmutableShades>
                 </sh:Shadows.Shades>
-
+               
                 <ImageButton
                     Padding="25"
                     xct:ShadowEffect.Color="{Binding SelectedBook.MainColor}"

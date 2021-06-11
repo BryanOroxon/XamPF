@@ -23,7 +23,8 @@ namespace XamPF.Services
                     Popularity_Counter_Book=94,
                     Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/main/Books/img_brave_new_world.png",
                     MainColor="#FF7948",
-                    AccentColor="#FC9773"
+                    AccentColor="#FC9773",
+                    Url_Audio="http://www.archive.org/download/dolittle_0707_librivox/voyagesdolittle_01_lofting_64kb.mp3"
                 },
                 new Book
                 {
@@ -35,7 +36,8 @@ namespace XamPF.Services
                     Popularity_Counter_Book=99,
                     Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/main/Books/img_the_old_man_and_the_sea.png",
                     MainColor="#2BBC89",
-                    AccentColor="#9BEBCF"
+                    AccentColor="#9BEBCF",
+                    Url_Audio="http://www.archive.org/download/20000_leagues_under_the_seas_librivox/20000leaguesundertheseas_1-02_verne_64kb.mp3"
                 },
                 new Book
                 {
@@ -47,7 +49,8 @@ namespace XamPF.Services
                     Popularity_Counter_Book=58,
                     Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/main/Books/img_1984.png",
                     MainColor="#026555",
-                    AccentColor="#0B787E"
+                    AccentColor="#0B787E",
+                    Url_Audio=""
                 },
                 new Book
                 {
@@ -59,7 +62,8 @@ namespace XamPF.Services
                     Popularity_Counter_Book=94,
                     Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/main/Books/img_pride_and_prejudice.png",
                     MainColor="#F8BA94",
-                    AccentColor="#F8BA94"
+                    AccentColor="#F8BA94",
+                    Url_Audio="http://www.archive.org/download/prideandprejudice_1005_librivox/prideandprejudice_01_austen_64kb.mp3"
                 },
                 new Book
                 {
@@ -71,7 +75,8 @@ namespace XamPF.Services
                     Popularity_Counter_Book=88,
                     Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/main/Books/img_the_lord_of_the_flies.png",
                     MainColor="#FF7948",
-                    AccentColor="#FC9773"
+                    AccentColor="#FC9773",
+                    Url_Audio="http://www.archive.org/download/thejunglebook_pc_librivox/junglebookthe_01_kipling_64kb.mp3"
                 },
                 new Book
                 {
@@ -83,7 +88,8 @@ namespace XamPF.Services
                     Popularity_Counter_Book=67,
                     Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/main/Books/img_farenheit.png",
                     MainColor="#F17C1F",
-                    AccentColor="#F29750"
+                    AccentColor="#F29750",
+                    Url_Audio="http://www.archive.org/download/worm_ouroboros_jm_librivox/thewormouroboros_00_eddison_64kb.mp3"
                 },
             };
             #endregion

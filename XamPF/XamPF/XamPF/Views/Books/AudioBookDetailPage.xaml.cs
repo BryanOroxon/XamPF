@@ -21,5 +21,7 @@ namespace XamPF.Views
                               (navigation: Navigation,
                               selectedBooksViewModel: booksViewModel);
         }
+
+        
     }
 }

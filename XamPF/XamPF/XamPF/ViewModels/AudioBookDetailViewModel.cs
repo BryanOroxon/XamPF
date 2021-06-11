@@ -31,5 +31,8 @@ namespace XamPF.ViewModels
             await Task.Delay(350);
             await _navigation.PopModalAsync(true);
         }
+
+        
+
     }
 }

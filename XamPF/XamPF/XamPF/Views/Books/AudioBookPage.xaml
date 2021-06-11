@@ -5,9 +5,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:tabs="http://sharpnado.com"
     xmlns:sh="http://sharpnado.com"
     xmlns:rv="http://sharpnado.com"
+
     ios:Page.UseSafeArea="true"
     BackgroundColor="{StaticResource colSext}"
     NavigationPage.HasNavigationBar="False">
@@ -160,7 +162,7 @@
                     Grid.Column="2"
                     Grid.ColumnSpan="2"
                     xct:TouchEffect.NativeAnimation="True"
-                    xct:TouchEffect.AnimationDuration="300"
+                    xct:TouchEffect.AnimationDuration="300"    
                     xct:TouchEffect.PressedBackgroundColor="#242424">
                     <Image
                         Source="{StaticResource icon_moore}"
@@ -213,11 +215,11 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Grid>
-                                <Frame CornerRadius="10">
+                                <yummy:PancakeView CornerRadius="10">
                                     <Image
-                                        Aspect="AspectFit"
+                                        Aspect="AspectFill"
                                         Source="{Binding Image_Book}" />
-                                </Frame>
+                                </yummy:PancakeView>
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
@@ -255,13 +257,13 @@
                                     Orientation="Horizontal"
                                     HeightRequest="112"
                                     Spacing="16">
-                                    <Frame
+                                    <yummy:PancakeView
                                         CornerRadius="8"
                                         WidthRequest="80">
                                         <Image
                                             Aspect="AspectFill"
                                             Source="{Binding Image_Book}" />
-                                    </Frame>
+                                    </yummy:PancakeView>
 
 
                                     <StackLayout
