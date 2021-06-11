@@ -158,29 +158,28 @@
             </StackLayout>
 
 
-            <!--<sh:Shadows
+            <sh:Shadows
                 Grid.Row="3"
                 Grid.RowSpan="2"
                 Grid.Column="3"
-                CornerRadius="30"
-                Shades="{sh:SingleShade Offset='0, 14',
-                                        BlurRadius='60',
-                                        Opacity=1,
-                                        Color='#FF7948'}">-->
+                CornerRadius="30">
+                <sh:Shadows.Shades>
+                    <sh:ImmutableShades>
+                        <sh:Shade
+                            BlurRadius="60"
+                            Opacity="1"
+                            Offset="0,14"
+                            Color="Pink" />
+                    </sh:ImmutableShades>
+                </sh:Shadows.Shades>
 
-            <ImageButton
-                Grid.Row="3"
-                Grid.RowSpan="2"
-                Grid.Column="3"
-                Padding="25"
-                xct:ShadowEffect.Color="{Binding SelectedBook.MainColor}"
-                xct:ShadowEffect.Opacity="1"
-                xct:ShadowEffect.OffsetX="4"
-                xct:ShadowEffect.OffsetY="14"
-                xct:ShadowEffect.Radius="60"
-                BackgroundColor="{Binding SelectedBook.MainColor}"
-                CornerRadius="40"
-                Source="{StaticResource icon_play}" />
+                <ImageButton
+                    Padding="25"
+                    xct:ShadowEffect.Color="{Binding SelectedBook.MainColor}"
+                    BackgroundColor="{Binding SelectedBook.MainColor}"
+                    CornerRadius="40"
+                    Source="{StaticResource icon_play}" />
+            </sh:Shadows>
 
             <Label
                 Grid.Row="6"
