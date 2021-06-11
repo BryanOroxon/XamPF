@@ -23,7 +23,14 @@ namespace XamPF.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            // Sharpnado SECTOR in iOS
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            Sharpnado.MaterialFrame.iOS.iOSMaterialFrameRenderer.Init();
+            Sharpnado.Tabs.iOS.Preserver.Preserve();
             Sharpnado.Shades.iOS.iOSShadowsRenderer.Initialize();
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

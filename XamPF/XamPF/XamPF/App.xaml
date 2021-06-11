@@ -4,6 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:FontIcons="clr-namespace:XamPF.CodeFontIcons;assembly=XamPF">
+
     <Application.Resources>
 
         <!--#region Colors-->
@@ -12,7 +13,9 @@
         <Color x:Key="colTer">#FFDD4F</Color>
         <Color x:Key="colQua">#ACAAB5</Color>
         <Color x:Key="colQui">#ECEFF2</Color>
+        <Color x:Key="colSext">#1D1536</Color>
         <!--#endregion-->
+
 
         <!--#region FontImageSource TABS-->
         <FontImageSource
@@ -43,6 +46,7 @@
             Size="21"
             Color="{StaticResource colQua}" />
         <!--#endregion-->
+
 
         <!--#region FontImageSource INTERFACES-->
         <FontImageSource
@@ -81,6 +85,7 @@
             Color="{DynamicResource colSec}" />
         <!--#endregion-->
 
+
         <!--#region TEXT SIZE [MATERIAL DESIGN]-->
         <!--  H1-Light  -->
         <x:Double x:Key="TxtSizeH1_96">96</x:Double>
@@ -112,5 +117,29 @@
         <x:Double x:Key="TxtSizeOver_10">10</x:Double>
         <!--#endregion-->
 
+
+        <!--#region SPACES BASE-->
+        <Style TargetType="Grid">
+            <Setter Property="RowSpacing" Value="0" />
+            <Setter Property="ColumnSpacing" Value="0" />
+        </Style>
+
+        <Style TargetType="StackLayout">
+            <Setter Property="Spacing" Value="0" />
+        </Style>
+
+        <Style TargetType="Frame">
+            <Setter Property="Padding" Value="0" />
+        </Style>
+        <!--#endregion-->
+
+
+        <!--#region LABELS BASE-->
+        <Style TargetType="Label">
+            <Setter Property="LineBreakMode" Value="TailTruncation" />
+        </Style>
+        <!--#endregion-->
+
     </Application.Resources>
+
 </Application>

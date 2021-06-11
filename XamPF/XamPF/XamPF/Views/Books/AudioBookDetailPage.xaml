@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamPF.Views.AudioBookDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:sh="http://sharpnado.com"
+    ios:Page.UseSafeArea="true"
+    BackgroundColor="{StaticResource colSext}"
+    NavigationPage.HasNavigationBar="False">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary Source="Styles.xaml" />
+    </ContentPage.Resources>
+
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <!--  0  -->
+                <!--<RowDefinition Height="0.03*" />-->
+                <!--  0  -->
+                <RowDefinition Height="24" />
+
+                <!--  1  -->
+                <!--<RowDefinition Height="0.06*" />-->
+                <!--  1  -->
+                <RowDefinition Height="48" />
+
+                <!--  2  -->
+                <!--<RowDefinition Height="0.531*" />-->
+                <!--  2  -->
+                <RowDefinition Height="424" />
+
+                <!--  3  -->
+                <!--<RowDefinition Height="0.05*" />-->
+                <!--  3  -->
+                <RowDefinition Height="40" />
+
+                <!--  4  -->
+                <!--<RowDefinition Height="0.05*" />-->
+                <!--  4  -->
+                <RowDefinition Height="40" />
+
+                <!--  5  -->
+                <!--<RowDefinition Height="0.025*" />-->
+                <!--  5  -->
+                <RowDefinition Height="20" />
+
+                <!--  6  -->
+                <!--<RowDefinition Height="0.06*" />-->
+                <!--  6  -->
+                <RowDefinition Height="Auto" />
+
+                <!--  7  -->
+                <!--<RowDefinition Height="0.013*" />-->
+                <!--  7  -->
+                <RowDefinition Height="10" />
+
+                <!--  8  -->
+                <!--<RowDefinition Height="0.024*" />-->
+                <!--  8  -->
+                <RowDefinition Height="Auto" />
+
+                <!--  9  -->
+                <!--<RowDefinition Height="0.01*" />-->
+                <!--  9  -->
+                <RowDefinition Height="8" />
+
+                <!--  10  -->
+                <!--<RowDefinition Height="0.025*" />-->
+                <!--  10  -->
+                <RowDefinition Height="Auto" />
+
+                <!--  11  -->
+                <!--<RowDefinition Height="0.023*" />-->
+                <!--  11  -->
+                <RowDefinition Height="18" />
+
+                <!--  12  -->
+                <!--<RowDefinition Height="0.02*" />-->
+                <!--  12  -->
+                <RowDefinition Height="Auto" />
+
+                <!--  13  -->
+                <!--<RowDefinition Height="0.015*" />-->
+                <!--  13  -->
+                <RowDefinition Height="12" />
+
+                <!--  14  -->
+                <!--<RowDefinition Height="0.023*" />-->
+                <!--  14  -->
+                <RowDefinition Height="Auto" />
+
+                <!--  15  -->
+                <!--<RowDefinition Height="0.041*" />-->
+                <!--  15  -->
+                <RowDefinition Height="33" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <!--  0  -->
+                <!--<ColumnDefinition Width="0.049*" />-->
+                <!--  0  -->
+                <ColumnDefinition Width="20" />
+
+                <!--  1  -->
+                <!--<ColumnDefinition Width="0.068*" />-->
+                <!--  1  -->
+                <ColumnDefinition Width="28" />
+
+                <!--  2  -->
+                <ColumnDefinition Width="0.32*" />
+
+                <!--  3  -->
+                <!--<ColumnDefinition Width="0.194*" />-->
+                <!--  3  -->
+                <ColumnDefinition Width="80" />
+
+                <!--  4  -->
+                <ColumnDefinition Width="0.32*" />
+
+                <!--  5  -->
+                <!--<ColumnDefinition Width="0.049*" />-->
+                <!--  5  -->
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+
+
+            <yummy:PancakeView
+                Grid.Row="0"
+                Grid.RowSpan="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="6"
+                Padding="0"
+                CornerRadius="0,0,30,30">
+                <Image
+                    Source="{Binding SelectedBook.Image_Book}"
+                    Aspect="AspectFill" />
+            </yummy:PancakeView>
+
+            <StackLayout
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                xct:TouchEffect.NativeAnimation="True"
+                xct:TouchEffect.AnimationDuration="300"
+                xct:TouchEffect.PressedBackgroundColor="#242424"
+                xct:TouchEffect.Command="{Binding ReturnPreviousPageCommand}">
+
+                <Image
+                    Source="{StaticResource icon_left_arrow_line}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+
+
+            <!--<sh:Shadows
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                CornerRadius="30"
+                Shades="{sh:SingleShade Offset='0, 14',
+                                        BlurRadius='60',
+                                        Opacity=1,
+                                        Color='#FF7948'}">-->
+
+            <ImageButton
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                Padding="25"
+                xct:ShadowEffect.Color="{Binding SelectedBook.MainColor}"
+                xct:ShadowEffect.Opacity="1"
+                xct:ShadowEffect.OffsetX="4"
+                xct:ShadowEffect.OffsetY="14"
+                xct:ShadowEffect.Radius="60"
+                BackgroundColor="{Binding SelectedBook.MainColor}"
+                CornerRadius="40"
+                Source="{StaticResource icon_play}" />
+
+            <Label
+                Grid.Row="6"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                xct:ShadowEffect.Color="{Binding SelectedBook.MainColor}"
+                MaxLines="2"
+                HorizontalTextAlignment="Center"
+                Text="{Binding SelectedBook.Name_Book}"
+                Style="{StaticResource TxtHeadline6_1}" />
+
+            <Label
+                Grid.Row="8"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                HorizontalTextAlignment="Center"
+                Text="{Binding SelectedBook.Author_Book}"
+                Style="{StaticResource TxtSubtitle1_2}" />
+
+            <StackLayout
+                Grid.Row="10"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                Orientation="Horizontal"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="9">
+
+                <Image Source="{StaticResource icon_star}" />
+
+                <Label
+                    Text="{Binding SelectedBook.Popularity_Level_Book}"
+                    Style="{StaticResource TxtBody1_2}"
+                    VerticalTextAlignment="End" />
+
+                <Label
+                    Text="{Binding SelectedBook.Popularity_Counter_Book}"
+                    Style="{StaticResource TxtSubtitle1_3}"
+                    VerticalTextAlignment="End" />
+            </StackLayout>
+
+            <Slider
+                Grid.Row="12"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                MaximumTrackColor="#ECEFF2"
+                MinimumTrackColor="{Binding SelectedBook.MainColor}"
+                ThumbColor="{Binding SelectedBook.AccentColor}" />
+
+            <Label
+                Grid.Row="14"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                Text="00.00"
+                HorizontalTextAlignment="Start"
+                Style="{StaticResource TxtBody2_4}" />
+
+            <Label
+                Grid.Row="14"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                Text="00.00"
+                HorizontalOptions="EndAndExpand"
+                Style="{StaticResource TxtBody2_4}" />
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

@@ -4,14 +4,13 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-    xmlns:Style="clr-namespace:XamPF.Views.Books"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:tabs="http://sharpnado.com"
     xmlns:sh="http://sharpnado.com"
-    Title="ShadowEffect and Sharpnado.Shadows"
-    xct:SafeAreaEffect.SafeArea="true"
+    xmlns:rv="http://sharpnado.com"
     ios:Page.UseSafeArea="true"
-    NavigationPage.HasNavigationBar="True"
-    BackgroundColor="#1D1536">
+    BackgroundColor="{StaticResource colSext}"
+    NavigationPage.HasNavigationBar="False">
 
 
     <ContentPage.Resources>
@@ -19,153 +18,352 @@
     </ContentPage.Resources>
 
 
-    <ContentPage.Content>
-        <ScrollView>
-            <StackLayout HorizontalOptions="Center">
+    <Grid>
 
-                <sh:Shadows
-                    CornerRadius="30"
-                    Shades="{sh:SingleShade Offset='4, 14',
-                                            BlurRadius='60',
-                                            Opacity=1,
-                                            Color='#FF7948'}">
-                    <ImageButton
-                        Padding="20"
-                        WidthRequest="60"
-                        HeightRequest="60"
+        <Grid.RowDefinitions>
+            <!--  0  -->
+            <RowDefinition Height="0.916*" />
+            <!--  1  -->
+            <RowDefinition Height="Auto" />
+            <!--  2  -->
+            <RowDefinition Height="16" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <!--  0  -->
+            <ColumnDefinition Width="0.211*" />
+            <!--  1  -->
+            <ColumnDefinition Width="0.578*" />
+            <!--  2  -->
+            <ColumnDefinition Width="0.211*" />
+        </Grid.ColumnDefinitions>
+
+
+        <ScrollView
+            Grid.RowSpan="3"
+            Grid.ColumnSpan="3">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <!--  0  -->
+                    <!--<RowDefinition Height="0.03*" />-->
+                    <!--  0  -->
+                    <RowDefinition Height="24" />
+
+                    <!--  1  -->
+                    <!--<RowDefinition Height="0.013*" />-->
+                    <!--  1  -->
+                    <RowDefinition Height="10" />
+
+                    <!--  2  -->
+                    <!--<RowDefinition Height="0.036*" />-->
+                    <!--  2  -->
+                    <RowDefinition Height="29" />
+
+                    <!--  3  -->
+                    <!--<RowDefinition Height="0.011*" />-->
+                    <!--  3  -->
+                    <RowDefinition Height="9" />
+
+                    <!--  4  -->
+                    <!--<RowDefinition Height="0.02*" />-->
+                    <!--  4  -->
+                    <RowDefinition Height="16" />
+
+                    <!--  5  -->
+                    <!--<RowDefinition Height="0.028*" />-->
+                    <!--  5  -->
+                    <RowDefinition Height="Auto" />
+
+                    <!--  6  -->
+                    <!--<RowDefinition Height="0.009*" />-->
+                    <!--  6  -->
+                    <RowDefinition Height="7" />
+
+                    <!--  7  -->
+                    <!--<RowDefinition Height="0.074*" />-->
+                    <!--  7  -->
+                    <RowDefinition Height="59" />
+
+                    <!--  8  -->
+                    <!--<RowDefinition Height="0.207*" />-->
+                    <!--  8  -->
+                    <RowDefinition Height="Auto" />
+
+                    <!--  9  -->
+                    <!--<RowDefinition Height="0.041*" />-->
+                    <!--  9  -->
+                    <RowDefinition Height="33" />
+
+                    <!--  10  -->
+                    <!--<RowDefinition Height="0.028*" />-->
+                    <!--  10  -->
+                    <RowDefinition Height="Auto" />
+
+                    <!--  11  -->
+                    <!--<RowDefinition Height="0.009*" />-->
+                    <!--  11  -->
+                    <RowDefinition Height="7" />
+
+                    <!--  12  -->
+                    <!--<RowDefinition Height="0.376*" />-->
+                    <!--  12  -->
+                    <RowDefinition Height="Auto" />
+
+                    <!--  13  -->
+                    <!--<RowDefinition Height="0.118*" />-->
+                    <!--  13  -->
+                    <RowDefinition Height="94" />
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <!--  0  -->
+                    <!--<ColumnDefinition Width="0.049*" />-->
+                    <!--  0  -->
+                    <ColumnDefinition Width="20" />
+
+                    <!--  1  -->
+                    <ColumnDefinition Width="0.812*" />
+
+                    <!--  2  -->
+                    <!--<ColumnDefinition Width="0.09*" />-->
+                    <!--  2  -->
+                    <ColumnDefinition Width="37" />
+
+                    <!--  3  -->
+                    <!--<ColumnDefinition Width="0.027*" />-->
+                    <!--  3  -->
+                    <ColumnDefinition Width="11" />
+
+                    <!--  4  -->
+                    <!--<ColumnDefinition Width="0.022*" />-->
+                    <!--  4  -->
+                    <ColumnDefinition Width="9" />
+                </Grid.ColumnDefinitions>
+
+
+                <!--  Semi Background Color  -->
+                <BoxView
+                    Grid.Row="0"
+                    Grid.RowSpan="8"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="5"
+                    BackgroundColor="{StaticResource colPrim}" />
+
+
+                <!--  Titles and icon moore  -->
+                <StackLayout
+                    Grid.Row="1"
+                    Grid.RowSpan="3"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"
+                    xct:TouchEffect.NativeAnimation="True"
+                    xct:TouchEffect.AnimationDuration="300"
+                    xct:TouchEffect.PressedBackgroundColor="#242424">
+                    <Image
+                        Source="{StaticResource icon_moore}"
                         HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        BackgroundColor="#FF7948"
-                        CornerRadius="30"
-                        Source="{StaticResource icon_play}" />
-                </sh:Shadows>
-
-                <ImageButton
-                    Padding="20"
-                    xct:ShadowEffect.Color="Orange"
-                    xct:ShadowEffect.Opacity="1"
-                    xct:ShadowEffect.OffsetX="4"
-                    xct:ShadowEffect.OffsetY="14"
-                    xct:ShadowEffect.Radius="60"
-                    WidthRequest="60"
-                    HeightRequest="60"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    BackgroundColor="#FF7948"
-                    CornerRadius="30"
-                    Source="{StaticResource icon_play}" />
+                        VerticalOptions="CenterAndExpand" />
+                </StackLayout>
 
                 <Label
-                    xct:ShadowEffect.Color="#141212"
-                    xct:ShadowEffect.OffsetX="3"
-                    xct:ShadowEffect.OffsetY="3"
-                    xct:ShadowEffect.Opacity="0.7"
-                    Text="Probando TxtTitle_1"
-                    Style="{StaticResource TxtTitle_1}"
-                    HorizontalTextAlignment="Center" />
+                    Grid.Row="2"
+                    Grid.Column="1">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                Text="Audio"
+                                Style="{StaticResource Span_TxtHeadLine5_1}" />
+                            <Span
+                                Text="Book"
+                                Style="{StaticResource Span_TxtHeadLine5_2}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
 
                 <Label
-                    xct:ShadowEffect.Color="#B418EB"
-                    xct:ShadowEffect.OffsetX="0"
-                    xct:ShadowEffect.OffsetY="3"
-                    xct:ShadowEffect.Opacity="0.9"
-                    xct:ShadowEffect.Radius="6"
-                    Text="Probando TxtSubtitle1_1"
-                    Style="{StaticResource TxtSubtitle1_1}"
-                    HorizontalTextAlignment="Center" />
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Text="Continue Listening"
+                    Style="{StaticResource TxtTitle_1}" />
+
+                <!--  List of Books read  -->
+                <CollectionView
+                    x:Name="carouselView_AudioBookRead"
+                    Grid.Row="7"
+                    Grid.RowSpan="2"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="4"
+                    HeightRequest="224"
+                    SelectionMode="Single"
+                    SelectionChanged="CollectionView_SelectedItem"
+                    ItemsSource="{Binding Books}">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout
+                            Orientation="Horizontal"
+                            SnapPointsType="MandatorySingle"
+                            SnapPointsAlignment="Start"
+                            ItemSpacing="8" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Frame CornerRadius="10">
+                                    <Image
+                                        Aspect="AspectFit"
+                                        Source="{Binding Image_Book}" />
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
 
                 <Label
-                    xct:ShadowEffect.Color="#6D6B6B"
-                    xct:ShadowEffect.OffsetX="0"
-                    xct:ShadowEffect.OffsetY="3"
-                    xct:ShadowEffect.Opacity="0.9"
-                    xct:ShadowEffect.Radius="6"
-                    Text="Probando TxtBody2_1"
-                    Style="{StaticResource TxtBody2_1}"
-                    HorizontalTextAlignment="Center" />
+                    Grid.Row="10"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Text="Top Books"
+                    Style="{StaticResource TxtTitle_2}" />
 
-                <Label
-                    xct:ShadowEffect.Color="#BFD5C9"
-                    xct:ShadowEffect.OffsetX="0"
-                    xct:ShadowEffect.OffsetY="3"
-                    xct:ShadowEffect.Opacity="0.7"
-                    xct:ShadowEffect.Radius="6"
-                    Text="Probando TxtBody1_1"
-                    Style="{StaticResource TxtBody1_1}"
-                    HorizontalTextAlignment="Center" />
+                <!--  List of Top Books  -->
+                <CollectionView
+                    x:Name="carouselView_AudioBookTop"
+                    Grid.Row="12"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    SelectionMode="Single"
+                    ItemsSource="{Binding Books}">
 
-                <Label
-                    xct:ShadowEffect.Color="#FF7948"
-                    xct:ShadowEffect.OffsetX="0"
-                    xct:ShadowEffect.OffsetY="3"
-                    xct:ShadowEffect.Opacity="0.8"
-                    xct:ShadowEffect.Radius="6"
-                    Text="Brave New World"
-                    Style="{StaticResource TxtHeadline6_1}"
-                    HorizontalTextAlignment="Center" />
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout
+                            Orientation="Vertical"
+                            SnapPointsType="MandatorySingle"
+                            SnapPointsAlignment="Start"
+                            ItemSpacing="16" />
+                    </CollectionView.ItemsLayout>
 
-                <Label
-                    xct:ShadowEffect.Color="#7AE0BD"
-                    xct:ShadowEffect.OffsetX="0"
-                    xct:ShadowEffect.OffsetY="3"
-                    xct:ShadowEffect.Opacity="0.8"
-                    xct:ShadowEffect.Radius="6"
-                    Text="The Old Man and the Sea"
-                    Style="{StaticResource TxtHeadline6_1}"
-                    HorizontalTextAlignment="Center" />
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <StackLayout
+                                    Orientation="Horizontal"
+                                    HeightRequest="112"
+                                    Spacing="16">
+                                    <Frame
+                                        CornerRadius="8"
+                                        WidthRequest="80">
+                                        <Image
+                                            Aspect="AspectFill"
+                                            Source="{Binding Image_Book}" />
+                                    </Frame>
 
-                <Label
-                    xct:ShadowEffect.Color="#00494D"
-                    xct:ShadowEffect.OffsetX="0"
-                    xct:ShadowEffect.OffsetY="3"
-                    xct:ShadowEffect.Opacity="0.8"
-                    xct:ShadowEffect.Radius="6"
-                    Text="1984"
-                    Style="{StaticResource TxtHeadline6_1}"
-                    HorizontalTextAlignment="Center" />
 
-                <Label
-                    xct:ShadowEffect.Color="#E1C2AF"
-                    xct:ShadowEffect.OffsetX="0"
-                    xct:ShadowEffect.OffsetY="3"
-                    xct:ShadowEffect.Opacity="0.8"
-                    xct:ShadowEffect.Radius="6"
-                    Text="Pride and Prejudice"
-                    Style="{StaticResource TxtHeadline6_1}"
-                    HorizontalTextAlignment="Center" />
+                                    <StackLayout
+                                        Orientation="Vertical"
+                                        TranslationY="12">
 
-                <Label
-                    xct:ShadowEffect.Color="#FF7948"
-                    xct:ShadowEffect.OffsetX="0"
-                    xct:ShadowEffect.OffsetY="3"
-                    xct:ShadowEffect.Opacity="0.8"
-                    xct:ShadowEffect.Radius="6"
-                    Text="The Lord of the Flies"
-                    Style="{StaticResource TxtHeadline6_1}"
-                    HorizontalTextAlignment="Center" />
+                                        <Label
+                                            Text="{Binding Name_Book}"
+                                            Style="{StaticResource TxtSubtitle1_1}"
+                                            MaxLines="2" />
+                                        <Label
+                                            Text="{Binding Author_Book}"
+                                            Style="{StaticResource TxtBody2_1}"
+                                            TranslationY="7" />
 
-                <Label
-                    xct:ShadowEffect.Color="#FE8B30"
-                    xct:ShadowEffect.OffsetX="0"
-                    xct:ShadowEffect.OffsetY="3"
-                    xct:ShadowEffect.Opacity="0.8"
-                    xct:ShadowEffect.Radius="6"
-                    Text="Farenheit"
-                    Style="{StaticResource TxtHeadline6_1}"
-                    HorizontalTextAlignment="Center" />
+                                        <StackLayout
+                                            Orientation="Horizontal"
+                                            TranslationY="8">
+                                            <Label
+                                                Text="{Binding Price_Book, StringFormat='{0:C2}'}"
+                                                Style="{StaticResource TxtBody1_1}"
+                                                VerticalTextAlignment="Center" />
+                                            <Image
+                                                Source="{StaticResource icon_star}"
+                                                TranslationX="17" />
 
-                <Label
-                    xct:ShadowEffect.Color="#000000"
-                    xct:ShadowEffect.OffsetX="0"
-                    xct:ShadowEffect.OffsetY="3"
-                    xct:ShadowEffect.Opacity="0.7"
-                    xct:ShadowEffect.Radius="6"
-                    Text="Probando TxtSubtitle1_2"
-                    Style="{StaticResource TxtSubtitle1_2}"
-                    HorizontalTextAlignment="Center" />
+                                            <Label
+                                                Text="{Binding Popularity_Level_Book}"
+                                                Style="{StaticResource TxtBody2_2}"
+                                                TranslationX="22"
+                                                VerticalTextAlignment="End" />
+                                            <Label
+                                                Text="{Binding Popularity_Counter_Book}"
+                                                Style="{StaticResource TxtBody2_3}"
+                                                TranslationX="26"
+                                                VerticalTextAlignment="End" />
+                                        </StackLayout>
 
-            </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </Grid>
         </ScrollView>
-    </ContentPage.Content>
+
+
+        <!--  Elegant TabView  -->
+        <rv:MaterialFrame
+            Grid.Row="1"
+            Grid.Column="1"
+            Padding="0"
+            MaterialTheme="AcrylicBlur"
+            CornerRadius="25"
+            HeightRequest="51">
+
+            <tabs:TabHostView
+                IsSegmented="True"
+                TabType="Fixed"
+                Shades="{sh:SingleShade Offset='0,0',
+                                        BlurRadius=0,
+                                        Color={StaticResource colSec},
+                                        Opacity=0}">
+
+                <tabs:TabHostView.Tabs>
+
+                    <tabs:BottomTabItem
+                        IconImageSource="{StaticResource icon_tab_books}"
+                        IsTextVisible="False"
+                        IconSize="21"
+                        SelectedTabColor="{DynamicResource colSec}"
+                        UnselectedIconColor="{DynamicResource colQua}" />
+
+                    <tabs:BottomTabItem
+                        IconImageSource="{StaticResource icon_tab_saved}"
+                        IsTextVisible="False"
+                        IconSize="21"
+                        SelectedTabColor="{DynamicResource colSec}"
+                        UnselectedIconColor="{DynamicResource colQua}" />
+
+                    <tabs:BottomTabItem
+                        IconImageSource="{StaticResource icon_tab_audio}"
+                        IsTextVisible="False"
+                        IconSize="21"
+                        SelectedTabColor="{DynamicResource colSec}"
+                        UnselectedIconColor="{DynamicResource colQua}" />
+
+                    <tabs:BottomTabItem
+                        IconImageSource="{StaticResource icon_tab_profile}"
+                        IsTextVisible="False"
+                        IconSize="21"
+                        SelectedTabColor="{DynamicResource colSec}"
+                        UnselectedIconColor="{DynamicResource colQua}" />
+
+                </tabs:TabHostView.Tabs>
+            </tabs:TabHostView>
+        </rv:MaterialFrame>
+
+    </Grid>
+
 
 </ContentPage>
