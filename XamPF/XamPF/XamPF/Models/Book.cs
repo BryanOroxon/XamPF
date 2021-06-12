@@ -15,6 +15,5 @@ namespace XamPF.Models
         public string Image_Book { get; set; }
         public string MainColor { get; set; }
         public string AccentColor { get; set; }
-        public string Url_Audio { get; set; }
     }
 }
