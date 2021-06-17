@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using FFImageLoading.Forms.Platform;
 using Foundation;
 using UIKit;
 
@@ -23,6 +23,12 @@ namespace XamPF.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            // FFImageLoading SECTOR in iOS
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            CachedImageRenderer.Init();
+            CachedImageRenderer.InitImageSourceHandler();
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
             // Sharpnado SECTOR in iOS
             // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

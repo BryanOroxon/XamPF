@@ -8,62 +8,21 @@ namespace XamPF.ViewModels
 {
     public class BooksViewModel : BaseViewModel
     {
-        private string name_book;
-        private string author_book;
-        private double price_book;
-        private double popularity_level_book;
-        private double popularity_counter_book;
-        private string image_book;
-        private string mainColor;
-        private string accentColor;
+        public string Name_Book { get; set; }
 
-        public string Name_Book
-        {
-            get => name_book;
-            set => SetProperty(ref name_book, value);
-        }
+        public string Author_Book { get; set; }
 
-        public string Author_Book
-        {
-            get => author_book;
-            set => SetProperty(ref author_book, value);
-        }
+        public double Price_Book { get; set; }
 
-        public double Price_Book
-        {
-            get => price_book;
-            set => SetProperty(ref price_book, value);
-        }
+        public double Popularity_Level_Book { get; set; }
 
-        public double Popularity_Level_Book
-        {
-            get => popularity_level_book;
-            set => SetProperty(ref popularity_level_book, value);
-        }
+        public double Popularity_Counter_Book { get; set; }
 
-        public double Popularity_Counter_Book
-        {
-            get => popularity_counter_book;
-            set => SetProperty(ref popularity_counter_book, value);
-        }
+        public string Image_Book { get; set; }
 
-        public string Image_Book
-        {
-            get => image_book;
-            set => SetProperty(ref image_book, value);
-        }
+        public string MainColor { get; set; }
 
-        public string MainColor
-        {
-            get => mainColor;
-            set => SetProperty(ref mainColor, value);
-        }
-
-        public string AccentColor
-        {
-            get => accentColor;
-            set => SetProperty(ref accentColor, value);
-        }
+        public string AccentColor { get; set; }
 
         public BooksViewModel(Book book)
         {

@@ -7,6 +7,7 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:sh="http://sharpnado.com"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     ios:Page.UseSafeArea="true"
     BackgroundColor="{StaticResource colSext}"
     NavigationPage.HasNavigationBar="False">
@@ -137,9 +138,14 @@
                 Grid.ColumnSpan="6"
                 Padding="0"
                 CornerRadius="0,0,30,30">
-                <Image
-                    Source="{Binding SelectedBook.Image_Book}"
-                    Aspect="AspectFill" />
+                <ffimageloading:CachedImage
+                    CacheDuration="30"
+                    FadeAnimationForCachedImages="True"
+                    FadeAnimationEnabled="True"
+                    FadeAnimationDuration="100"
+                    CacheType="All"
+                    Aspect="AspectFill"
+                    Source="{Binding SelectedBook.Image_Book}" />
             </yummy:PancakeView>
 
             <StackLayout
@@ -172,7 +178,7 @@
                             Color="Pink" />
                     </sh:ImmutableShades>
                 </sh:Shadows.Shades>
-               
+
                 <ImageButton
                     Padding="25"
                     xct:ShadowEffect.Color="{Binding SelectedBook.MainColor}"
