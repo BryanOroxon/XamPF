@@ -9,7 +9,7 @@
     xmlns:tabs="http://sharpnado.com"
     xmlns:sh="http://sharpnado.com"
     xmlns:rv="http://sharpnado.com"
-
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     ios:Page.UseSafeArea="true"
     BackgroundColor="{StaticResource colSext}"
     NavigationPage.HasNavigationBar="False">
@@ -162,7 +162,7 @@
                     Grid.Column="2"
                     Grid.ColumnSpan="2"
                     xct:TouchEffect.NativeAnimation="True"
-                    xct:TouchEffect.AnimationDuration="300"    
+                    xct:TouchEffect.AnimationDuration="300"
                     xct:TouchEffect.PressedBackgroundColor="#242424">
                     <Image
                         Source="{StaticResource icon_moore}"
@@ -194,7 +194,7 @@
 
                 <!--  List of Books read  -->
                 <CollectionView
-                    x:Name="carouselView_AudioBookRead"
+                    x:Name="collectionView_AudioBookRead"
                     Grid.Row="7"
                     Grid.RowSpan="2"
                     Grid.Column="1"
@@ -216,7 +216,12 @@
                         <DataTemplate>
                             <Grid>
                                 <yummy:PancakeView CornerRadius="10">
-                                    <Image
+                                    <ffimageloading:CachedImage
+                                        CacheDuration="30"
+                                        FadeAnimationForCachedImages="True"
+                                        FadeAnimationEnabled="True"
+                                        FadeAnimationDuration="100"
+                                        CacheType="All"
                                         Aspect="AspectFill"
                                         Source="{Binding Image_Book}" />
                                 </yummy:PancakeView>
@@ -235,7 +240,7 @@
 
                 <!--  List of Top Books  -->
                 <CollectionView
-                    x:Name="carouselView_AudioBookTop"
+                    x:Name="collectionView_AudioBookTop"
                     Grid.Row="12"
                     Grid.Column="1"
                     Grid.ColumnSpan="2"
@@ -260,7 +265,12 @@
                                     <yummy:PancakeView
                                         CornerRadius="8"
                                         WidthRequest="80">
-                                        <Image
+                                        <ffimageloading:CachedImage
+                                            CacheDuration="30"
+                                            FadeAnimationForCachedImages="True"
+                                            FadeAnimationEnabled="True"
+                                            FadeAnimationDuration="100"
+                                            CacheType="All"
                                             Aspect="AspectFill"
                                             Source="{Binding Image_Book}" />
                                     </yummy:PancakeView>

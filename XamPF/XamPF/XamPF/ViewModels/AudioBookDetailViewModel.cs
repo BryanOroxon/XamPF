@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvvmHelpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,9 @@ using XamPF.Services;
 
 namespace XamPF.ViewModels
 {
-    public class AudioBookDetailViewModel
+    public class AudioBookDetailViewModel : BaseViewModel
     {
-        INavigation _navigation;
+        private readonly INavigation _navigation;
         public ICommand ReturnPreviousPageCommand { get; set; }
         public BooksViewModel SelectedBook { get; set; }
 
@@ -31,8 +32,6 @@ namespace XamPF.ViewModels
             await Task.Delay(350);
             await _navigation.PopModalAsync(true);
         }
-
-        
 
     }
 }

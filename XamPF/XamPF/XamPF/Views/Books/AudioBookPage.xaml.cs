@@ -22,12 +22,12 @@ namespace XamPF.Views
 
         private async void CollectionView_SelectedItem(object sender, SelectionChangedEventArgs e)
         {
-            var selectedItem = e.CurrentSelection.FirstOrDefault();
+            object selectedItem = e.CurrentSelection.FirstOrDefault();
 
             if (selectedItem != null)
             {
 
-                carouselView_AudioBookRead.ScrollTo
+                collectionView_AudioBookRead.ScrollTo
                  (
                     item: selectedItem,
                     position: ScrollToPosition.Start,
@@ -38,7 +38,8 @@ namespace XamPF.Views
                 await Navigation.PushModalAsync(new AudioBookDetailPage(selectedItem as BooksViewModel), true);
             }
 
-            carouselView_AudioBookRead.SelectedItem = null;
+            collectionView_AudioBookRead.SelectedItem = null;
         }
+
     }
 }
